@@ -34,6 +34,23 @@ class MyApp extends StatelessWidget {
                   fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Montserrat",
+                  letterSpacing: 0.1,
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.access_time_rounded,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      "Coming Soon!",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
