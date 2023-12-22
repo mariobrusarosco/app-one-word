@@ -19,6 +19,14 @@ class MyApp extends StatelessWidget {
                   "assets/images/mario.jpeg",
                 ),
               ),
+              Text(
+                "One Word Game",
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
         ),
