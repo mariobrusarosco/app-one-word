@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.pink,
         body: SafeArea(
           child: Column(
             children: [
@@ -24,7 +24,16 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 40,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Montserrat",
+                ),
+              ),
+              Text(
+                "Make your friends guess with only one word",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontFamily: "Montserrat",
                 ),
               ),
             ],
