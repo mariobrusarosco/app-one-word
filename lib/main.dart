@@ -28,15 +28,21 @@ class DiceUdemy extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Image.asset("assets/images/dice1.png"),
+              child: TextButton(
+                onPressed: () => print("Left dice pressed"),
+                child: Image.asset(
+                  "assets/images/dice1.png",
+                ),
               ),
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Image.asset("assets/images/dice2.png"),
+              child: TextButton(
+                onPressed: () {
+                  print("Left dice pressed");
+                },
+                child: Image.asset(
+                  "assets/images/dice2.png",
+                ),
               ),
             )
           ],
