@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
 class DiceUdemy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var leftDiceValue = 1;
+    var rightDiceValue = 1;
+
     return SafeArea(
       child: Center(
         child: Row(
@@ -31,7 +34,7 @@ class DiceUdemy extends StatelessWidget {
               child: TextButton(
                 onPressed: () => print("Left dice pressed"),
                 child: Image.asset(
-                  "assets/images/dice1.png",
+                  "assets/images/dice$leftDiceValue.png",
                 ),
               ),
             ),
@@ -41,7 +44,7 @@ class DiceUdemy extends StatelessWidget {
                   print("Left dice pressed");
                 },
                 child: Image.asset(
-                  "assets/images/dice2.png",
+                  "assets/images/dice$rightDiceValue.png",
                 ),
               ),
             )
