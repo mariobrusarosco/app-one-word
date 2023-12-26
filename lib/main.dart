@@ -1,11 +1,40 @@
 import 'dart:math';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(DiceUdemy());
+  runApp(Xylophone());
 }
 
+// XYLOPHONE APP
+class Xylophone extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Xylophone",
+      home: Scaffold(
+        backgroundColor: Colors.indigoAccent,
+        body: SafeArea(
+          child: Container(
+            child: FloatingActionButton(
+              onPressed: () async {
+                final player = AudioPlayer();
+                await player.play(AssetSource('audios/note.wav'));
+              },
+              // await player.play(AssetSource('assets/audios/note.wav')),
+              child: Text(
+                "Play",
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// DICE APP
 class DiceUdemy extends StatefulWidget {
   @override
   _DiceUdemyState createState() => _DiceUdemyState();
@@ -17,70 +46,54 @@ class _DiceUdemyState extends State<DiceUdemy> {
 
   @override
   Widget build(BuildContext context) {
-      int randomDiceValue () {
-        return Random().nextInt(6) + 1;
-      }
+    int randomDiceValue() {
+      return Random().nextInt(6) + 1;
+    }
 
-      return MaterialApp(
-          home: Scaffold(
-            backgroundColor: Colors.deepOrangeAccent,
-            body: SafeArea(
-              child: Center(
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: TextButton(
-                        onPressed: () {
-                          setState(() {
-                            leftDiceValue = randomDiceValue();
-                          });
-                        },
-                        child: Image.asset(
-                          "assets/images/dice$leftDiceValue.png",
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: TextButton(
-                        onPressed: () {
-                          setState(() {
-                            rightDiceValue = randomDiceValue();
-                          });
-                        },
-                        child: Image.asset(
-                          "assets/images/dice$rightDiceValue.png",
-                        ),
-                      ),
-                    )
-                  ],
+    return MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.deepOrangeAccent,
+      body: SafeArea(
+        child: Center(
+          child: Row(
+            children: [
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      leftDiceValue = randomDiceValue();
+                    });
+                  },
+                  child: Image.asset(
+                    "assets/images/dice$leftDiceValue.png",
+                  ),
                 ),
               ),
-            ),
-            appBar: AppBar(
-              title: Text("Dices"),
-              backgroundColor: Colors.orangeAccent,
-            ),
-          ));
-    }
-  }
-}
-
-class MyApp {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.deepOrangeAccent,
-        body: DiceUdemy(),
-        appBar: AppBar(
-          title: Text("Dices"),
-          backgroundColor: Colors.orangeAccent,
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      rightDiceValue = randomDiceValue();
+                    });
+                  },
+                  child: Image.asset(
+                    "assets/images/dice$rightDiceValue.png",
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
-    );
+      appBar: AppBar(
+        title: Text("Dices"),
+        backgroundColor: Colors.orangeAccent,
+      ),
+    ));
   }
 }
 
+// ONE WORD - STATELESS
 class OneWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
