@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:one_word/learning-stuff/quiz/quiz.dart';
+import 'package:one_word/destini/destini.dart';
 
-void main() => runApp(QuizUdemy());
+void main() => runApp(Destini());
 
 // ONE WORD - STATELESS
 class OneWord extends StatelessWidget {
