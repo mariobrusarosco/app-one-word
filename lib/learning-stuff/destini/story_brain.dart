@@ -1,4 +1,4 @@
-import 'package:one_word/destini/story.dart';
+import 'package:one_word/learning-stuff/destini/story.dart';
 
 class StoryBrain {
   int _currentStoryNumber = 0;

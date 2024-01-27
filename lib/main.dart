@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_word/destini/destini.dart';
+import 'package:one_word/learning-stuff/destini/destini.dart';
 
 void main() => runApp(Destini());
 

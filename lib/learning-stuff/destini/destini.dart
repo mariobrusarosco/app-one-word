@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_word/destini/story.dart';
+import 'package:one_word/learning-stuff/destini/story.dart';
 
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {

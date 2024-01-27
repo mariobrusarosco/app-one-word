@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_word/destini/story_brain.dart';
+import 'package:one_word/learning-stuff/destini/story_brain.dart';
 
 class StoryPage extends StatefulWidget {
   @override
