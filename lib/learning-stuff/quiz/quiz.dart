@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:one_word/learning-stuff/quiz/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -11,6 +12,20 @@ class _QuizUdemyState extends State<QuizUdemy> {
     bool correctAnwser = quizBrain.getQuestionAnswer();
 
     setState(() {
+      Alert(context: context, title: "RFLUTTER", desc: "Flutter is awesome.")
+          .show();
+
+      if (quizBrain.isFinished()) {
+        Alert(
+          context: context,
+          title: "Finished!",
+          desc: "You\'ve reached the end of the quiz.",
+        ).show();
+        quizBrain.reset();
+        scoreKeeper = [];
+
+        return;
+      }
       if (correctAnwser == userPickedAnswer) {
         scoreKeeper.add(
           Icon(
